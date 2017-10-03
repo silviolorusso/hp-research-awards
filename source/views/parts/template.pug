@@ -1,0 +1,23 @@
+//- template.pug
+extends template-home.pug
+
+block page-title 
+  title #{title}, #{author} — HP Research Awards
+
+block title
+  span #{author} - #{title}
+
+block progress
+  .progress-container
+    .progress-bar
+
+block thearrow
+  span#thearrow  ⌵
+
+block left-nav
+  #left-nav
+    h1 #{title} - #{author} 
+    ul#toc
+
+block content
+

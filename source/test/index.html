@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Standalone Test File</title>
+
+  <link rel="icon" href="favicon.png">
+
+  <link href="reading-pos.css" rel="stylesheet" />
+  <style type="text/css" id="fonts">
+    @font-face {
+      font-family: 'Playfair';
+      font-style: normal;
+      font-weight: normal;
+      src: url(PlayfairDisplay-Black.ttf) format('truetype');
+    }
+  </style>
+  <style type="text/css">
+    .container {
+      max-width: 500px; 
+      margin: auto;
+    }
+    .container * {
+      max-width: 100%;
+      height: auto;
+    }
+    .font {
+      font-family: 'Playfair';
+      font-size: 40px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <progress value="0" id="progressBar">
+    <div class="progress-container">
+      <span class="progress-bar"></span>
+    </div>
+  </progress>
+
+  <div class="container">
+    <h1>Standalone Test File</h1>
+
+    <p>Verify inclusion of the following in the standalone version.</p>
+
+    <ul>
+      <li>Favicon</li>
+      <li>Fonts</li>
+      <li>Images</li>
+      <li>Background Images (background-image:url())</li>
+      <li>Videos (mp4)</li>
+      <li>Audios (mp3)</li>
+      <li>JS libraries</li>
+      <li>External CSS Styles</li>
+    </ul>
+
+    <h2>Favicon</h2>
+
+    <p>Can you see the favicon?</p>
+
+    <h2>Fonts</h2>
+
+    <p><em>Fonts need to be included in an internal CSS style with the "fonts" ID.</em></p>
+
+    <p class="font">This should be set in Playfair Black</p>
+
+    <h2>Images</h2>
+
+    <img src="1.png"/>
+
+    <h2>Background images</h2>
+
+    <div style="background-image:url(0.jpg); height:200px"></div>
+
+    <h2>Videos (mp4)</h2>
+
+    <video controls >
+      <source src="kuleshov-short.mp4" type="video/mp4">
+    </video>
+
+    <h2>Audios (mp3)</h2>
+
+    <audio controls >
+      <source src="scratch.mp3" type="audio/mpeg">
+    </audio>
+
+    <h2>JS libraries</h2>
+
+    <p>Check the progress bar on top.</p>
+
+    <h2>External CSS Styles</h2>
+
+    <p>The progress bar on top should be red.</p>
+
+  </div><!-- /.container -->
+
+  <script src="jquery-3.1.1.min.js"></script>
+  <script src="reading-pos.js"></script>
+</body>
+</html>

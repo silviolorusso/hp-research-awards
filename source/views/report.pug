@@ -1,0 +1,190 @@
+//- index.pug
+extends parts/template.pug
+
+block vars
+  - var title   = 'Command+S This Publication'
+  - var author  = 'Silvio Lorusso and Niels Vrijdag'
+  - var year    = '2017'
+
+block content
+  .container
+    .mast-head
+      div
+        img(src='assets/img/report/cover.jpg')
+        h1 #{title} 
+        h2 #{author} 
+        p This text describes the process of developing a series of three publications that are part of the HP Research Awards series. Here, we discuss our editorial strategy, focusing on the design and technical choices that oriented the creation of the whole series and the single publications.
+
+        p.ctrl-s 
+          span Ctrl+S
+          |  this publication!
+    br.clear
+    hr
+    .content
+      h1#c0 #{title} — Notes on the Design and Development of the HP Research Awards Series
+
+      h2#c01 The HP Research Awards 
+
+      +fig('/report/winners.jpg', 'The 2016 winners of WdKA Research Prize: from the left, Daisy Thijssen, Jade Ruijzenaars and Ermi van Oers.')
+
+      :markdown-it
+        In 2015, the Willem de Kooning Academy launched an award for ['art and design  as critical research'](http://www.wdka.nl/wp-content/uploads/sites/4/2015/11/2015_wdka_research-prize_jury-rapport.pdf). The award is meant to give exposure to the most valuable "experimental and critical research in form of art and design projects". Besides three different monetary prizes, the award includes the publication of the winning projects within a dedicated series. This publication process is meant to reflect the idea that art and design can be research endeavors *per se*, thus not merely function as the expression, embellishment or structuring of previous research. The publication process becomes an opportunity to investigate experimental techniques and methods both in print and in electronic form. The HP Research Awards series is a form of **publication as research**.
+
+      +fig('/report/reinvented.jpg', 'The Art School Reinvented, 2016.')
+
+      :markdown-it
+        Some of the awarded projects are also included in [*The Art School Reinvented*](http://reinvented.wdka.nl/), a web-to-print publication showcasing exemplary autonomous, commercial and social projects by recent graduates. The publication, that can be continuosly expanded, was designed and developed by [Template](http://www.template01.info/) (Marlon Harder and Lasse van den Bosch Christensen).
+
+      h2#c02 Goals: Visuality, Materiality and Accessibility
+
+      :markdown-it
+        For the 2016 edition of the WdKA HP Research Award, we were asked to develop three hybrid publications of the winning graduation projects. The goal was to emphasize the visual and material aspects of the hybrid publishing approach, thus striving on the one hand or experimental visual and material outputs and on the other creating a recognizable research publication series that could be easily accessed, shared and archived.
+
+      h2#c3 Two Versions: Standard and Custom
+
+      :markdown-it
+        We summarized this brief by defining a double focus on **visuality/materiality** and **accessibility**. In order to address these needs, we conceived an hybrid publication made of two interrelated versions: a standard one and a custom one. The standard version is meant to respond to the following criteria:
+
+        - consistency
+        - accessibility
+        - archiving
+
+        The custom version is meant to address the following ones: 
+
+        - specificity (a specific form reflects a specific content)
+        - visuality/materiality
+        - interactivity (broadly speaking, e.g. non-trivial ways to navigate a printed publication)
+
+        For the standard version we decided to use an electronic format, thus taking advantage of the modularity of code and its templating possibilities. Complementary to that, we opted for a printed custom version characterized by  specifically designed visual and haptic qualities. 
+
+      h2#c4 The Perils of EPUB
+
+      :markdown-it
+        When it comes to choose a format for an e-publication, EPUB might seem the obvious choice since accessibility is a core issue:
+
+        "A key concept of EPUB is that content presentation should adapt to the User rather than the User having to adapt to a particular presentation of content"
+
+        In other words, instead of imposing its features, an EPUB file tries to do its best in each possible situation, from narrow E Ink readers to multi-touch tablets. Furthermore, its inner architecture is crystal clear and easily accessible.  
+
+        Despite this, we weren't sure EPUB would actually fit the criteria of *accessibility*. 
+
+      +fig('/report/epub-error.jpg', 'A frequent sight while developing EPUBs.')
+
+      :markdown-it
+        We found that the unhandiness, fragmentation and inconsistencies of the ecosystem surrounding the EPUB format hinders accessibility. This concerns both the tools to create EPUBs (Calibre, Sigil, InDesign etc.) and the ones to read them (iBooks, Adobe Digital Editions, etc). 
+
+        This is particularly true when it comes to ebooks with peculiar designs, since the absence of a respected standard among reading software requires a series of hacks to create the most basic layouts.  
+
+      blockquote EPUB means frustration. Both for the developer, the designer and the reader. 
+
+      :markdown-it
+        Silvio could experience this directly by giving a series of workshops, together with interaction designer Jacopo Pompilii, entitled [*The Mobile is the Massage*](http://silviolorusso.com/the-mobile-is-the-massage-workshop-report/). The goal of the workshop was to actively interpret the peculiar graphic solutions of self-reflexive artists' books and heavily visual ones in order to produce an EPUB specifically designed for mobile devices. 
+
+      .slides
+        img(src='assets/img/report/mobile-massage0.jpg').slide
+        img(src='assets/img/report/mobile-massage1.jpg').slide
+        img(src='assets/img/report/mobile-massage2.jpg').slide
+
+      p.caption A frequent sight while developing EPUBs. (
+        a(href='https://indesignsecrets.com/creating-epub-in-indesign-cs5-5-beware-the-webkit-bug.php') source
+        | )
+
+      :markdown-it
+        This state of affairs reminded us of a previous project of the WdKA entitled *I Would Rather Design a Poster Than a Website*. Similarly, many people that might be interested in the HP Research Award series (students, teachers etc.) would rather read a PDF or an online publication than an EPUB. 
+
+      h2#c6 CMD+S this Publication
+
+      +fig('/report/cmd_s.png', 'Since Mac is kinda ubiquitous in art schools.')
+
+      :markdown-it
+        One of the main advantages of EPUB is that incorporates all the elements of an electronic publication (images, videos, structure) within a single file. This is generally not the case with HTML since images, scripts and the like are externally linked. However, it is possible to store images, videos and any type of file within an HTML file by encoding them as [Base64](https://varvy.com/pagespeed/base64-images.html) strings of text (one of the oldest ways to encode elements into HTML). Thanks to this, it is possible to create a publication consisting of a single HTML file that includes semantic HTML5 structure, minimal JS navigation, CSS styles and multimedia content. This self-sufficient HTML file can be easily saved from the browser (CMD+S/CTRL+S), shared and archived. 
+
+      h2#c7 Streamlining the Process
+
+      :markdown-it
+        Since the publications follow a more or less rigid template, we used [Pug.js](https://codepen.io/mimoduo/post/learn-pug-js-with-pugs) for generating the HTML and [Sass](http://sass-lang.com/) for the CSS. We found particularly valuable the possibility of inserting Markdown text into Pug templates thanks to [Pug filters](https://pugjs.org/language/filters.html). 
+
+      :markdown-it
+        Inspired by pandoc's ['--self-contained'](https://github.com/jgm/pandoc/blob/8768f7e5b060b4024d88d12f4255d515dd4ca7fa/src/Text/Pandoc/SelfContained.hs) module, we wrote a Python script (INSERT LINK) able to encode in Base64 favicon, CSS styles, images, videos, audios, scripts, background images and fonts.  
+
+      :markdown-it
+        The full repository can be found here. 
+
+      h2#c8 Meta-Archiving
+
+      :markdown-it
+        The electronic standard version also functions as a form of 'meta archiving': it includes photographic documentation of the custom version and a brief text explaining the related design choices. In this sense, the two version are interrelated in a sort of hybrid *mise en abyme*. 
+
+
+      h2#c9 Custom Versions
+
+      .slides
+        img(src='assets/img/meat-market/mockup-01.jpg').slide
+        img(src='assets/img/meat-market/mockup-02.jpg').slide
+        img(src='assets/img/meat-market/mockup-03.jpg').slide
+
+      :markdown-it
+        **[_Meat Market_](meat-market.html) by Daisy Tijssen**
+
+      p Designed as a commercial leaflet, the publication presents all the numbers and facts of the research alongside stock images. Mimicking the way meat is presented to us. Just as the research this publication is meant to be read in no particular order.
+
+      .slides
+        img(src='assets/img/living-light/Mockup-LL-1.jpg').slide
+        img(src='assets/img/living-light/Mockup-LL-2.jpg').slide
+        img(src='assets/img/living-light/Mockup-LL-3.jpg').slide
+
+      :markdown-it
+        **[_Living Light_](living-light.html) by Ermi van Oers**
+
+      p The idea of the printed version was to give it a warm and natural appearance. The story of the Living Light is told trough Ermi’s text and many photographs. The quotes in the booklet give an insight in Ermi’s thoughts and motivation. The included schematics make this publication also interesting for readers curious of the technical aspects of the project.
+
+      .slides
+        img(src='assets/img/crangon-crangon/Mockup4.jpg').slide
+        img(src='assets/img/crangon-crangon/Mockup5.jpg').slide
+        img(src='assets/img/crangon-crangon/Mockup6.jpg').slide
+
+      :markdown-it
+        **[_Crangon Crangon_](crangon-crangon.html) by Jade Ruijzenaars**
+
+      p The idea of the printed version was to give it a warm and natural appearance. The story of the Living Light is told trough Ermi’s text and many photographs. The quotes in the booklet give an insight in Ermi’s thoughts and motivation. The included schematics make this publication also interesting for readers curious of the technical aspects of the project.    
+
+      hr.end
+  #bio
+    .container
+      img(src='assets/img/report/silvio.jpg').portrait
+      h1#bio-h1 Silvio Lorusso
+      p Silvio Lorusso is a Rotterdam-based artist, designer, and researcher. His work was presented at Re:Publica (DE), MaXXI (IT), Transmediale (DE), Drugo More (HR), Vögele Kultur Zentrum (CH), NRW-Forum (DE), MoneyLab (NL), Impakt (NL), Sight & Sound (CA), Adhocracy (GR), Biennale Architettura (IT). He holds a Ph.D. in Design Sciences from the School of Doctorate Studies – Iuav University of Venice.
+      a(href='http://silviolorusso.com/') http://silviolorusso.com
+      br.clear
+    .container
+      img(src='assets/img/report/niels.jpg').portrait
+      h1#bio-h1 Niels Vrijdag
+      p Niels Vrijdag is a graphic designer based in Rotterdam. He describes himself as a playful creative that loves to get lost in the design problem while maintaining an experimental, intuitive and personal style. He strives to explore the possibilities of graphic design and develop a unique visual language at the intersection of design, typography and visual art.
+      a(href='http://nielsvrijdag.nl/') http://nielsvrijdag.nl
+      br.clear
+  #colophon
+    .container
+      h3#colophon-h3 Colophon
+      p This is a Lorem Ipsum is not simply random text. This is a Lorem Ipsum is not simply random text.
+
+      ul.credits
+        li 
+          strong Authors: 
+          span Silvio Lorusso and Niels Vrijdag
+        li 
+          strong Editor: 
+          span Renee Turner
+        li
+          strong Coordinator:
+          span Kimmy Spreeuwenberg
+
+      hr
+
+      h3#hp-h3 Hybrid Publishing
+      :markdown-it
+        This publication was developed by Hybrid Publishing, founded by the Willem de Kooning Academy as a means of profiling and disseminating outstanding research conducted by students and teaching staff on their own or in collaboration with external partners. Researching and experimenting across a broad range of processes native to digital and analog media, WdKA Hybrid Publishing fosters novel approaches to design, authoring, reading, and dissemination, and embraces the pluriformity of publishing which are made possible through the legacies of Gutenberg’s press to present-day technologies. [hybridpublishing.wdka.nl](http://hybridpublishing.wdka.nl)
+
+      hr
+
+      h3#research-awards-h3 Research Awards
+      p The HP Research Awards series showcases the work of recipients of the Willem de Kooning Research Award. Established by the Willem de Kooning Foundation, the awards are granted to outstanding graduation projects that provide new insights to broader audiences through their research.

@@ -1,0 +1,186 @@
+//- index.pug
+extends parts/template.pug
+
+block vars
+  - var title   = 'Meat Market'
+  - var author  = 'Daisy Thijssen'
+  - var year    = '2017'
+
+block content
+  .container
+    .mast-head
+      div
+        img(src='assets/img/meat-market/cover.jpg')
+        h1 #{title} 
+        h2 #{author} 
+        p Meat Market aims to raise awareness of meat that was not obtained from conventionally slaughtered animals. By turning animals into unrecognisable products, we strip away the layer of cultured nostalgia we project on them. At the same time, we go on wasting meat from healthy and consumable animals because we deem it socially unacceptable. Meat Market addresses the following questions: ‘Why does an average Dutch dinner have to contain meat?’, ‘Where does this desire for meat and its overconsumption come from?’, and ‘Why do we eagerly consume pigs and cows, but balk at the idea of consuming veal or horse?’
+
+        p.ctrl-s 
+          span Ctrl+S
+          |  this publication!
+    br.clear
+    hr
+    .content
+      h1#c0 #{title}
+
+      // +fig('meat-market/1-08.png', '')
+
+      h2#c1 Data/Statistics:
+      p
+        :markdown-it(inline) Dutch consumers eat an estimated **3 kilograms** of meat per month. 
+      p
+        :markdown-it(inline) **42%** of the Dutch population consumes meat on a daily basis.
+      p
+        :markdown-it(inline) **81%** of the Dutch population consumes meat at least five days a week.
+      p
+        :markdown-it(inline) **Half a billion** animals are slaughtered annually.
+      p
+        :markdown-it(inline) **30%** are marketed for the Dutch market.
+      p
+        :markdown-it(inline) **70%** of Dutch meat is shipped abroad.
+
+      h2#c2 Questions:
+      
+      p Where does this desire for meat and its overconsumption come from?
+      p Why does an average Dutch dinner have to contain meat?
+      p Why do the Dutch eagerly consume pigs and cows, but balk at the idea of consuming veal or horse?
+
+      h2#c3 Historical Turning Point
+      p In 1944-1945, a German blockade cut off food and fuel, resulting in famine, known as the Hunger Winter, during which 4.5 million people were affected, and as many as 20,000-25,000 died. After the war and into the 1950s, Dutch eating habits shifted, and meat was associated with prosperity. Meat was now consumed daily, rather than only on festive occasions.
+
+      h2#c4 Supermarket Monopoly:
+
+      ul 
+        li The link between the consumer, local farmer and butcher is broken.
+        li Six chain stores control the entire market.
+        li One type of distribution system dominates the market, ensuring a uniform and fairly limited range of products.
+
+      h2#c5 Fear of Meat / Meat Alienation
+      p Packaging distances customers from once-living animals and the processes of industrialised slaughter. We purchase what looks appealing, not the reality behind the meat industry. Chicken becomes chicken sausages, chicken nuggets, and even chicken nuggets in the shape of dinosaurs. Through this metamorphosis, we teach children that meat comes in playful shapes far removed from its origin.
+
+      h2#c6 Hunger Persists:
+      
+      ul
+        li The Netherlands ranks 5th worldwide in terms of wealth.
+        li 35,000 Dutch households are dependent on food banks for survival.
+        li The Dutch throw away up to 20% of the food they purchase.
+
+      h2#c7 Taboo / Things We Don’t Normally Like To Eat:
+      
+      ul
+        li Roadkill
+        li Cute, cuddly and innocent baby animals
+        li Animals we identify with
+        li Pets
+        li Vermin or animals in overabundance such as pigeons, mice or rats
+
+      h2#c8 Marginalised Meat:
+
+      ul
+        li Every year, 200,000 geese are shot at airports such as Schiphol.
+        li 90% of these shot geese remain in the field.
+        li Muskrats damage our dikes and embankments.
+        li Old race horses are too expensive to keep alive and are put down.
+        li Pigeons are present in large numbers. Their droppings make buildings dirty and clog drainage gutters.
+      
+      p Some meat is taboo, the meat of pets and vermin. Various species are considered pests. They are shot and killed for various reasons, but all have in common that many people do not consider them consumable. Though these unwanted animals are not killed for their meat, they are killed nonetheless. By not consuming these animals, we are creating even more waste.
+
+
+      h2#c9 Accidental Meat
+      p Dead animals killed in traffic lose their value as living creatures and are considered trash. 55,000 traffic accidents involving large wildlife occur in the Netherlands every year. Red deer, fallow deer and wild boars are some of the casualties. The N206, N302, N304 and the N344 are the most dangerous roads when it comes to roadkill in the Netherlands. They surround an area called De Hoge Veluwe, which is home to over 600 species of wild animals. This area also contains the highest rate of households making use of food banks.
+      
+      ul 
+        li Roadkill is the most honestly acquired meat.
+        li The animal was not raised for meat.
+        li It was not killed for meat.
+        li It is accidental meat.
+
+      h2#c10 Need for Meat
+      p We do not want to know that animals have suffered. This behaviour of denial is typical of addicts. Eating meat is a pleasurable experience; it gives us a satisfying feeling. Hypoxanthine, inosinic acid and guanylic acid, chemicals that are present in meat, all stimulate the central nervous system. They have a very similar chemical structure to that of caffeine in coffee or theobromine in cacao, and thus can cause similar effects.
+      p Craving for a steak/burger in the evening is similar to craving for your daily cup of morning coffee. This can be seen in a MRI scan of the amygdalae in your brain. The amygdalae processes memory, decision making and emotional reactions. When an alcoholic is confronted with imagery of alcoholic drinks the amygdalae lights up. Based on the strong reactions in the amygdalae towards meat imagery, we can conclude that some individuals can experience an addiction towards meat.
+
+      h2#c11 Toxic Meat
+      p We consume 3 kg of meat every month. When 2 kg or more consists of red meat or processed meat, you are at an increased health risk. Red meat carries natural irons; too much heme iron damages your intestines and can lead to cancer. 
+      p Nitrates and nitrites are added to processed meat; bacon, ham, sausages, salami, and burgers. They add a salty flavour and improve the appearance of meat by giving it a red or pink blush. They are used in order to preserve the meat and prevent the growth of the deadly botulism bacterium. However, nitrates are toxic in high amounts. Your body is able to break down up to 20 grams daily (2 slices of sandwich meat) of the toxic nitrite present in processed meat without any resulting damage to your system. Heme iron and nitrite are found only in red and processed meat. White unprocessed meat (chicken, turkey or fish) are free of additives and cause no increased risks.
+
+      h2#c12 Conclusion:
+      p We prefer to eat meat with increased health risks wrapped in plastic instead of fresh, healthy meat from animals who lived in the wild, who were never raised or killed for their meat and were never stuffed with antibiotics or other chemicals. By turning animals into the unrecognizable supermarket products that are no real representation of the animal itself, we strip away the layer of cultured nostalgia we project on them. At the same time, we waste meat from healthy and consumable animals because we deem it socially unacceptable. Seen as repulsive, these animals have lost their value to us both as living creatures and as a potential food source. Meanwhile, the number of households dependent on food banks keeps increasing.
+
+      hr.end
+  #bio
+    .container
+      img(src='assets/img/meat-market/portrait.jpg').portrait
+      h1#bio-h1 Daisy Thijssen
+      :markdown-it
+        Daisy Thijssen is a designer and researcher with a fascination for contemporary food culture and its influence upon society. She graduated in 2016 from the Willem de Kooning Academy in Rotterdam with her project *Meat Up*. With her hands-on approach to research, she learned to slaughter animals, experienced the principles of taxidermy, and curated the *Community Meat Up* at V2_Lab for the Unstable Media in Rotterdam.
+      a(href='http://daisythijssen.com/') http://daisythijssen.com/
+      br.clear
+  #meta
+    .container
+      h2 Meta-archive
+      p Designed as a commercial leaflet, the publication presents all the numbers and facts of the research alongside stock images. Mimicking the way meat is presented to us. Just as the research this publication is meant to be read in no particular order.
+    .slides
+      img(src='assets/img/meat-market/mockup-01.jpg').slide
+      img(src='assets/img/meat-market/mockup-02.jpg').slide
+      img(src='assets/img/meat-market/mockup-03.jpg').slide
+      img(src='assets/img/meat-market/mockup-04.jpg').slide
+      img(src='assets/img/meat-market/mockup-05.jpg').slide
+      img(src='assets/img/meat-market/mockup-06.jpg').slide
+      img(src='assets/img/meat-market/mockup-07.jpg').slide
+      img(src='assets/img/meat-market/mockup-08.jpg').slide
+      img(src='assets/img/meat-market/mockup-09.jpg').slide
+      img(src='assets/img/meat-market/mockup-10.jpg').slide
+      img(src='assets/img/meat-market/mockup-11.jpg').slide  
+  #colophon
+    .container
+      h3#colophon-h3 Colophon
+      
+      ul
+        li Meat Market © 2017  
+        li 
+          :markdown-it(inline) [hp.researchawards.wdka.nl](http://hp.researchawards.wdka.nl)  
+        li Developed by Hybrid Publishing,  
+        li Willem de Kooning Academy  
+        li Text © Daisy Thijssen (
+          :markdown-it(inline) [daisythijssen.com](http://daisythijssen.com/)) 
+        li Photography © Adobe Stock 
+        li All rights reserved 
+        li ISBN 978-94-92479-03-7
+
+      ul.credits
+        li 
+          strong Editors: 
+          span Daisy Thijssen and Renee Turner
+        li
+          strong Coordinator:
+          span Kimmy Spreeuwenberg
+        li
+          strong Research and art direction:
+          span
+            :markdown-it(inline) [Silvio Lorusso](http://silviolorusso.com)
+        li
+          strong Design:
+          span
+            :markdown-it(inline) [Niels Vrijdag](http://nielsvrijdag.nl)
+        li
+          strong Printed by:
+          span Pantheon drukkers
+
+      p 
+        | With special thanks to:
+        br
+        | Wiel Thijssen, Kirsten Doornbos, Martijn Jansen, Marieke de Boef, Kim Strigl, Niermala B. Timmers, Maartje Verzellenberg, Alex Falk (V2_Lab for the Unstable Media), Nicolle Schatborn (de Keuken van het Ongewenst Dier), Rob Hagenouw (de Keuken van het Ongewenst Dier), Isaac Monté, Emilie van Spronsen, Mandy den Elzen and Marloes Haarmans.
+
+      hr
+
+      h3#hp-h3 Hybrid Publishing
+      :markdown-it
+        This publication was developed by Hybrid Publishing, founded by the Willem de Kooning Academy as a means of profiling and disseminating outstanding research conducted by students and teaching staff on their own or in collaboration with external partners. Experimenting with a diverse range different processes native to digital and analog media, Hybrid Publishing fosters novel approaches to design, writing, reading, and dissemination, and embraces the pluriformity of publishing made possible through the legacies of Gutenberg’s press to present-day technologies.  
+        [hybridpublishing.wdka.nl](http://hybridpublishing.wdka.nl)
+
+      hr
+
+      h3#research-awards-h3 Research Awards
+      p The HP Research Awards series showcases the work of recipients of the Willem de Kooning Research Award. Established by the Willem de Kooning Foundation, the awards are granted to outstanding graduation projects that provide new insights to broader audiences through their research. The series consists of a printed version and an electronic one for each publication. While the former explores the possibilities of print, the latter is a single standalone HTML file that can be easily saved, shared and archived.   
+
+      br.clear

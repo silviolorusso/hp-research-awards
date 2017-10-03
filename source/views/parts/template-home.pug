@@ -1,0 +1,80 @@
+//- template.pug
+
+mixin fig(name, caption)
+  figure
+    img(src='assets/img/' + name)
+    figcaption= caption
+
+block vars
+<!DOCTYPE html>
+html  
+  head
+    meta(charset='utf-8')
+    meta(name='HandheldFriendly', content='True')
+    meta(name='MobileOptimized', content='320')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(href='assets/img/favicon.png', rel='icon')
+    style#fonts.
+      @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: normal;
+        src: url(assets/fonts/Roboto/Roboto-Regular.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: bold;
+        src: url(assets/fonts/Roboto/Roboto-Bold.ttf) format('truetype');
+      }
+
+      @font-face {
+        font-family: 'Lora';
+        font-style: normal;
+        font-weight: normal;
+        src: url(assets/fonts/Lora/Lora-Regular.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: 'Lora';
+        font-style: italic;
+        font-weight: normal;
+        src: url(assets/fonts/Lora/Lora-Italic.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: 'Lora';
+        font-style: normal;
+        font-weight: bold;
+        src: url(assets/fonts/Lora/Lora-Bold.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: 'Lora';
+        font-style: italic;
+        font-weight: bold;
+        src: url(assets/fonts/Lora/Lora-BoldItalic.ttf) format('truetype');
+      }
+    link(href='assets/css/main.css', rel='stylesheet')
+    link(href='assets/css/flickity.css', rel='stylesheet')
+    block page-title
+    title HP Research Awards
+  body
+    block progress
+    #nav
+      #arrow
+        block thearrow
+      #series
+        a(href='index.html') HP Research Awards
+      #title
+        block title
+    block left-nav
+    block content
+    footer
+      .container
+        img(src='assets/img/logo-hp.png').logos
+        img(src='assets/img/logo-wdka.png').logos
+        br.clear
+
+    script(src="assets/js/vendor/jquery-3.2.1.min.js")
+    script(src="assets/js/vendor/flickity.pkgd.min.js")
+    script(src="assets/js/vendor/jquery.scrollTo.min.js")
+    script(src="assets/js/vendor/jquery.localScroll.min.js")
+    script(src="assets/js/bundle.js")
