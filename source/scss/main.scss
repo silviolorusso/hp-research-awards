@@ -19,7 +19,7 @@ $nav-height-mobile: 30px;
 
 @mixin transform($transforms) {
      -moz-transform: $transforms;
-       -o-transform: $transforms;
+            -o-transform: $transforms;
       -ms-transform: $transforms;
   -webkit-transform: $transforms;
           transform: $transforms;
@@ -188,7 +188,11 @@ body {
     height: 100vh;
     font-family: $second-font-stack;
     display: table;
-    * {
+    h1 {
+      font-size: 1.1rem;
+      margin-top: 0;
+    }
+    h2, p, a, span {
       font-size: 0.9rem;
     }
     div {
@@ -390,7 +394,7 @@ body {
     }
 
     .container {
-      padding: 0 3em;
+      padding: 0 1em;
 
       .mast-head {
         height: auto;

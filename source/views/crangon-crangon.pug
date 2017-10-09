@@ -12,9 +12,8 @@ block content
       div
         img(src='assets/img/crangon-crangon/cover.jpg')
         h1 #{title} 
-        h2 #{author} 
-        p MISSING Meat Market aims to raise awareness of meat that was not obtained from conventionally slaughtered animals. By turning animals into unrecognisable products, we strip away the layer of cultured nostalgia we project on them. At the same time, we go on wasting meat from healthy and consumable animals because we deem it socially unacceptable. Meat Market addresses the following questions: ‘Why does an average Dutch dinner have to contain meat?’, ‘Where does this desire for meat and its overconsumption come from?’, and ‘Why do we eagerly consume pigs and cows, but balk at the idea of consuming veal or horse?’
-
+        h2 by #{author} 
+        p Most of the shrimp consumed in the Netherlands is caught in the North Sea, transported to Morocco for peeling, and then shipped back again to Europe. A shrimp  consists for 60% to 70% of its shell, which is not suitable for consumption. The  opening of a large mechanised peeling centre in the Netherlands has led to increased visibility of the problem of waste. This production system and resulting waste are invisible to consumers. Jade Ruijzenaars explored this issue, and experimented with a new application for shrimp shells in ceramic glazing in order to tell the story of this industry.
         p.ctrl-s 
           span Ctrl+S
           |  this publication!
@@ -35,7 +34,14 @@ block content
 
       +fig('crangon-crangon/detail.jpg', '')
       
-      p I became fascinated by the potential of discarded shrimp shells after reading an article on the website <a describedby="footnote-label" href="#munchies">Vice Munchies about Meat the Mushroom</a>, a group of Amsterdam scientists. In response to the huge amount of waste produced by the shrimp industry, Meat the Mushroom were experimenting with making cheese from discarded shrimp shells, using a fungus as a catalyst for the fermentation process. Previously I knew nothing about the Dutch shrimp industry and the North Sea shrimp (scientific name: Crangon crangon), but this article explained how the industry works, and also pointed toward other potential uses of the discarded shells.
+      p I became fascinated by the potential of discarded shrimp shells after reading an article on the website <a describedby="footnote-label">Vice Munchies about Meat the Mushroom</a>, a group of Amsterdam scientists. In response to the huge amount of waste produced by the shrimp industry, Meat the Mushroom were experimenting with making cheese from discarded shrimp shells, using a fungus as a catalyst for the fermentation process. Previously I knew nothing about the Dutch shrimp industry and the North Sea shrimp (scientific name: Crangon crangon), but this article explained how the industry works, and also pointed toward other potential uses of the discarded shells.
+
+      p#footnote-label
+
+      ol#footnotes
+        li#munchies 
+          :markdown-it
+            Alberding, Felicia. ‘In Amsterdam-Noord maken ze schimmelkaas van garnalen resten.’ In: [Munchies Vice](https://munchies.vice.com/nl/articles/in-deze-zeecontainer-maken-ze-schimmelkaas-van-garnalenresten), December 11, 2014.
 
       p As we all know, the fresher the fish, the better the taste. However, shrimp sold in the Netherlands is not as fresh as we might think. Although most of the shrimp sold here is fished off the Dutch coast, it is then transported to Morocco (where labour costs are much lower) to be peeled by hand. After that, it is shipped back to Europe for consumption.
 
@@ -57,13 +63,6 @@ block content
         li Ensures a natural, slightly sweet taste
 
       p However, the problem of waste remains. A shrimp consists for 60% to 70% of its shell, which is not suitable for consumption. And with the increased capacity for shrimp shelling, the amount of waste has also increased: currently some 60,000 kilos per week, roughly the equivalent of three big trucks.
-
-      p#footnote-label
-
-      ol#footnotes
-        li#munchies 
-          :markdown-it
-            Alberding, Felicia. ‘In Amsterdam-Noord maken ze schimmelkaas van garnalen resten.’ In: [Munchies Vice](https://munchies.vice.com/nl/articles/in-deze-zeecontainer-maken-ze-schimmelkaas-van-garnalenresten), December 11, 2014.
 
       +fig('crangon-crangon/ceramics1.jpg', '')
 
@@ -195,10 +194,10 @@ block content
       hr.end
   #bio
     .container
-      img(src='assets/img/meat-market/portrait.jpg').portrait
+      img(src='assets/img/crangon-crangon/jade.jpg').portrait
       h1#bio-h1 #{author}
       :markdown-it
-        MISSING
+        Jade graduated in 2016 with a bachelor’s degree in Lifestyle Design (now Lifestyle Transformation Design) from the Willem de Kooning Academy in Rotterdam. Her research project Crangon Crangon was exhibited during the Dutch Design Week, and Jade followed a study programme at the Erasmus Centre for Entrepreneurship (ECE) in Rotterdam in order to further develop her project. Currently Jade lives in Cape Town, South Africa, and works at Studio H, a culinary experience design studio. 
       a(href='http://jaderuijzenaars.nl/') http://jaderuijzenaars.nl/
       br.clear
   #meta
@@ -211,8 +210,6 @@ block content
       img(src='assets/img/crangon-crangon/Background.jpg').slide
       img(src='assets/img/crangon-crangon/Background1.jpg').slide
       img(src='assets/img/crangon-crangon/Mockup1.jpg').slide
-      img(src='assets/img/crangon-crangon/Mockup2jpg').slide
-      img(src='assets/img/crangon-crangon/Mockup3.jpg').slide
       img(src='assets/img/crangon-crangon/Mockup4.jpg').slide
       img(src='assets/img/crangon-crangon/Mockup5.jpg').slide
       img(src='assets/img/crangon-crangon/Mockup6.jpg').slide
@@ -241,7 +238,7 @@ block content
           span Jade Ruijzenaars
         li 
           strong Editor: 
-          span Renee Turner
+          span Renée Turner
         li
           strong Coordinator:
           span Kimmy Spreeuwenberg
@@ -272,7 +269,7 @@ block content
 
       h3#hp-h3 Hybrid Publishing
       :markdown-it
-        This publication was developed by Hybrid Publishing, founded by the Willem de Kooning Academy as a means of profiling and disseminating outstanding research conducted by students and teaching staff on their own or in collaboration with external partners. Researching and experimenting across a broad range of processes native to digital and analog media, WdKA Hybrid Publishing fosters novel approaches to design, authoring, reading, and dissemination, and embraces the pluriformity of publishing which are made possible through the legacies of Gutenberg’s press to present-day technologies. [hybridpublishing.wdka.nl](http://hybridpublishing.wdka.nl)
+        This publication was developed by Hybrid Publishing, founded by the Willem de Kooning Academy as a means of profiling and disseminating outstanding research conducted by students and teaching staff on their own or in collaboration with external partners. Researching and experimenting across a broad range of processes native to digital and analog media, WdKA Hybrid Publishing fosters novel approaches to design, authoring, reading, and dissemination, and embraces the pluriformity of publishing which are made possible through the legacies of Gutenberg’s press to present-day technologies. For more information about Hybrid Publishing or questions about the publications please visit [hybridpublishing.wdka.nl](http://hybridpublishing.wdka.nl) or contact Kimmy Spreeuwenberg via [wdka.hybridpublishing@hr.nl](mailto:wdka.hybridpublishing@hr.nl).
 
       hr
 
