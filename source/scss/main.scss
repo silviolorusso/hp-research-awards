@@ -211,6 +211,21 @@ body {
     .ctrl-s {
       color: $medium-col;
     }
+    &:before {
+      content: "↓";
+      display: block;
+      position: absolute;
+      width: 700px;
+      text-align: center;
+      top: 90vh;
+      font-size: 1.4rem;
+      color: $dark-col;
+      animation: blinker 1.5s ease infinite;
+    }
+  }
+
+  @keyframes blinker {  
+    50% { opacity: 0; }
   }
 
   .mast-head.home {
@@ -219,6 +234,9 @@ body {
     }
     padding: 3em 0;
     height: auto;
+    &:before {
+      display: none;
+    }
   }
 
   .clear {
@@ -407,6 +425,9 @@ body {
             margin-bottom: 3em;
             display: block;
           }
+        }
+        &:before {
+          display: none;
         }
       }
     }
