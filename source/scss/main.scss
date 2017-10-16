@@ -93,6 +93,7 @@ body {
   line-height: 1.5;
   color: $text-col;
   height: auto;
+  overflow-y: scroll;
 
   progress {
     z-index: 9999999;
@@ -184,6 +185,12 @@ body {
     padding: 10em 0 6em 0;
   }
 
+  .logos {
+    height: 50px;
+    margin-top: 40px;
+    margin-right: 30px;
+  }
+
   .mast-head {
     height: 100vh;
     font-family: $second-font-stack;
@@ -204,6 +211,9 @@ body {
       max-width: 250px;
       margin-right: 50px;
       float: left;
+      -webkit-box-shadow: 3px 3px 19px 0px rgba(0,0,0,0.3);
+      -moz-box-shadow: 3px 3px 19px 0px rgba(0,0,0,0.3);
+      box-shadow: 3px 3px 19px 0px rgba(0,0,0,0.3);
     }
     h1, h2 {
       font-weight: bold;
@@ -218,8 +228,8 @@ body {
       width: 700px;
       text-align: center;
       top: 90vh;
-      font-size: 1.4rem;
-      color: $dark-col;
+      font-size: 3rem;
+      color: $medium-col;
       animation: blinker 1.5s ease infinite;
     }
   }
